@@ -24,7 +24,7 @@
     "eslint": "^1.7.1"
   },
   "scripts": {
-    "prepublish": "babel ./connector-es6.js > ./connector.js; echo "\"use strict\";\n$(cat ./connector.js)" > ./connector.js",
+    "prepublish": "./babel.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Geoff Wagstaff <geoff@gosquared.com>",
