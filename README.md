@@ -24,7 +24,7 @@ This is particularly useful if running on AWS Lambda, since the appropriate cred
 var myCredentials = new AWS.EnvironmentCredentials('AWS'); // Lambda provided credentials
 var es = require('elasticsearch').Client({
   hosts: 'https://amazon-es-host.us-east-1.es.amazonaws.com',
-  connectionClass: require('http-aws-es')(AWS),
+  connectionClass: require('http-aws-es-di')(AWS),
   amazonES: {
     region: "us-east-1",
     credentials: myCredentials
