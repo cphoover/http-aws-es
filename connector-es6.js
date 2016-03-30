@@ -22,13 +22,14 @@
  * @class HttpConnector
  */
 
-let AWS = require('aws-sdk');
+let AWS;
 let HttpConnector = require('elasticsearch/src/lib/connectors/http')
 let _ = require('elasticsearch/src/lib/utils');
 let zlib = require('zlib');
 
 class HttpAmazonESConnector extends HttpConnector {
-  constructor(host, config) {
+  constructor(host, config, _AWS) {
+    AWS = AWS || _AWS; // we have to pass in the aws sdk because... it's breaking lambda
     super(host, config);
     this.endpoint = new AWS.Endpoint(host.host);
     let c = config.amazonES;
