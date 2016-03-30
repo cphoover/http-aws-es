@@ -17,9 +17,7 @@
     "sign"
   ],
   "main": "connector.js",
-  "dependencies": {
-    "aws-sdk": "^2.2.19"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel": "^5.8.23",
     "babel-eslint": "^4.1.3",
