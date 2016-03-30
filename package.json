@@ -1,6 +1,6 @@
 {
   "name": "http-aws-es-di",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Use the elasticsearch-js client with Amazon ES",
   "repository": "https://github.com/TheDeveloper/http-aws-es",
   "bugs": "https://github.com/TheDeveloper/http-aws-es/issues",
@@ -24,7 +24,7 @@
     "eslint": "^1.7.1"
   },
   "scripts": {
-    "prepublish": "babel ./connector-es6.js > ./connector.js",
+    "prepublish": "babel ./connector-es6.js > ./connector.js; echo "\"use strict\";\n$(cat ./connector.js)" > ./connector.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Geoff Wagstaff <geoff@gosquared.com>",
